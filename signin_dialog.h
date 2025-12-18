@@ -15,7 +15,7 @@ class signin_Dialog : public QDialog
 public:
     explicit signin_Dialog(QWidget *parent = nullptr);
     ~signin_Dialog();
-    Login con;
+    Login con;//to use the function from login class
 
 private slots:
     void on_signin_clicked();

@@ -17,13 +17,72 @@
    <enum>Qt::LeftToRight</enum>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget {
-    background: qlineargradient(
-        x1:0, y1:0, x2:0, y2:1,
-        stop:0 #6A4B8A,
-        stop:1 #4B3869
-    );
+   <string notr="true">/* MAIN BACKGROUND */
+QWidget {
+    background-color: #261b36;
+    color: #f5f5f5;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 11pt;   /* Base size */
 }
+
+/* LABELS */
+QLabel {
+    color: #f5f5f5;
+    font-size: 12pt;       /* bigger labels */
+    font-weight: 600;      /* semi-bold, not heavy */
+
+}
+
+/* INPUTS */
+QLineEdit,
+QComboBox,
+QDateEdit,
+QTextEdit {
+    background-color: #3b2a52;
+    border: 1px solid #7f6ad8;
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 11pt;       /* input text slightly smaller */
+    color: #ffffff;
+}
+
+/* FOCUS STYLE */
+QLineEdit:focus,
+QComboBox:focus,
+QDateEdit:focus,
+QTextEdit:focus {
+    border: 1px solid #f1c40f;
+    outline: none;
+}
+
+/* BUTTON */
+QPushButton {
+    background-color: #7f6ad8;
+    color: white;
+    font-size: 12pt;       /* bigger button text */
+    font-weight: 700;
+    border-radius: 6px;
+    padding: 8px 0;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #9b82ff;
+}
+
+QPushButton:pressed {
+    background-color: #5e4ab0;
+}
+
+/* ERROR LABELS */
+QLabel#errorUsernameLabel,
+QLabel#errorPasswordLabel,
+QLabel#errorEmailLabel {
+    color: #ff6b6b;
+    font-size: 9pt;        /* small hint text */
+    font-weight: normal;
+}
+
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -56,8 +115,8 @@
      <widget class="QGroupBox" name="groupBox">
       <property name="font">
        <font>
-        <family>Arial Black</family>
-        <pointsize>15</pointsize>
+        <family>Segoe UI</family>
+        <pointsize>11</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -82,8 +141,8 @@
          <widget class="QLabel" name="label">
           <property name="font">
            <font>
-            <family>Arial Black</family>
-            <pointsize>16</pointsize>
+            <family>Segoe UI</family>
+            <pointsize>12</pointsize>
             <weight>75</weight>
             <bold>true</bold>
            </font>
@@ -102,9 +161,9 @@
            <widget class="QPushButton" name="Singup">
             <property name="font">
              <font>
-              <family>Arial Black</family>
-              <pointsize>10</pointsize>
-              <weight>75</weight>
+              <family>Segoe UI</family>
+              <pointsize>12</pointsize>
+              <weight>87</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -117,9 +176,9 @@
            <widget class="QPushButton" name="signin">
             <property name="font">
              <font>
-              <family>Arial Black</family>
-              <pointsize>10</pointsize>
-              <weight>75</weight>
+              <family>Segoe UI</family>
+              <pointsize>12</pointsize>
+              <weight>87</weight>
               <bold>true</bold>
              </font>
             </property>

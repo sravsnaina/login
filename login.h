@@ -15,20 +15,20 @@ class Login : public QMainWindow
     Q_OBJECT
 
 public:
-    QSqlDatabase mydb;
-    void conclose()
+    QSqlDatabase mydb;  // object database
+    void conclose()   //function to close the data base
     {
-        mydb.close();
-        mydb.removeDatabase(QSqlDatabase::defaultConnection);
+        mydb.close(); //close data base
+        mydb.removeDatabase(QSqlDatabase::defaultConnection);//removing connection
     }
 
-    bool conopen()
+    bool conopen()//function to open database
     {
         // Create/connect to a database using SQLite driver
         mydb = QSqlDatabase::addDatabase("QSQLITE");
 
         // Set the database file path (absolute path)
-        mydb.setDatabaseName("C:/QT programs/Login/Login_data.db");
+        mydb.setDatabaseName("C:/QT programs/sjjnx-main/Login_data.db");
 
         // Try to open the database
         if(mydb.open())
